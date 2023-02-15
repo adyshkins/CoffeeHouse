@@ -1,0 +1,140 @@
+﻿<Window x:Class="CoffeeHouse.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeHouse.Windows"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" 
+        Height="800"
+        Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Регистрация"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Margin="0 50 0 0"/>
+
+            <TextBlock Text="Введите логин"
+                       FontSize="18"
+                       Margin="0 20 0 0"/>
+
+            <Border CornerRadius="10"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Width="250"
+                    Height="40"
+                    Padding="5">
+                <TextBox x:Name="TbLogin"
+                     Width="240"
+                     Height="35"
+                     FontSize="18"
+                     BorderThickness="0"
+                     VerticalAlignment="Center"/>
+            </Border>
+
+            <TextBlock Text="Введите пароль"
+                       FontSize="18"
+                       Margin="0 20 0 0"/>
+            <Border CornerRadius="10"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Width="250"
+                    Height="40"
+                    Padding="5">
+                <PasswordBox x:Name="PbPassword"
+                             Width="240"
+                             Height="35"
+                             FontSize="18"
+                             Margin="0 0 0 0"
+                             VerticalAlignment="Center"/>
+            </Border>
+
+
+            <TextBlock Text="Введите Имя"
+                       FontSize="18"
+                       Margin="0 20 0 0"/>
+
+            <Border CornerRadius="10"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Width="250"
+                    Height="40"
+                    Padding="5">
+                <TextBox x:Name="TbName"
+                     Width="240"
+                     Height="35"
+                     FontSize="18"
+                     BorderThickness="0"
+                     VerticalAlignment="Center"/>
+            </Border>
+
+            <TextBlock Text="Введите Телефон"
+                       FontSize="18"
+                       Margin="0 20 0 0"/>
+
+            <Border CornerRadius="10"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Width="250"
+                    Height="40"
+                    Padding="5">
+                <TextBox x:Name="TbPhone"
+                     Width="240"
+                     Height="35"
+                     FontSize="18"
+                     BorderThickness="0"
+                     VerticalAlignment="Center"/>
+            </Border>
+
+            <TextBlock Text="Пол"
+                       FontSize="18"
+                       Margin="0 20 0 0"/>
+            <ComboBox x:Name="CmbGender"
+                      Width="240"
+                      Height="35"
+                      FontSize="18"
+                      />
+
+            <TextBlock Text="Дата рождения"
+                       FontSize="18"
+                       Margin="0 20 0 0"/>
+
+            <DatePicker x:Name="DPBirthday"
+                        Width="240"
+                        Height="35"
+                        />
+
+
+            <TextBlock Text="Введите Почту"
+                       FontSize="18"
+                       Margin="0 20 0 0"/>
+
+            <Border CornerRadius="10"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Width="250"
+                    Height="40"
+                    Padding="5">
+                <TextBox x:Name="TbEmail"
+                     Width="240"
+                     Height="35"
+                     FontSize="18"
+                     BorderThickness="0"
+                     VerticalAlignment="Center"/>
+            </Border>
+
+            <Button x:Name="BtnReg"
+                    Content="Регистрация"
+                    Width="200"
+                    Height="40"
+                    FontSize="18"
+                    Margin="0 50 0 0"
+                    Click="BtnReg_Click"/>
+
+        </StackPanel>
+    </Grid>
+
+</Window>
