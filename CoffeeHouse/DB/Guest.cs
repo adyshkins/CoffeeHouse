@@ -21,16 +21,16 @@ namespace CoffeeHouse.DB
         }
     
         public int IDGuest { get; set; }
-        public string Name { get; set; } //
-        public string Phone { get; set; } //
-        public int IDGender { get; set; } //
-        public Nullable<System.DateTime> Birthday { get; set; } //
-        public string Email { get; set; } //
+        public string Name { get; set; }
+        public string Phone { get; set; }
+        public int IDGender { get; set; }
+        public Nullable<System.DateTime> Birthday { get; set; }
+        public string Email { get; set; }
         public string DiscountCode { get; set; }
         public int IDLevelDiscount { get; set; }
         public decimal Score { get; set; }
-        public string Login { get; set; } //
-        public string Password { get; set; } //
+        public string Login { get; set; }
+        public string Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Check> Check { get; set; }
