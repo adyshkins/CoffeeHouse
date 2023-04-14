@@ -27,6 +27,12 @@ namespace CoffeeHouse.Windows
         {
             InitializeComponent();
 
+            // проверка роли
+
+            if (ClassHelper.UserDataClass.Emploee.IDPost != 1)
+            {
+                BtnAddProduct.Visibility = Visibility.Collapsed;
+            }
             GetProducr();
         }
 
@@ -37,6 +43,39 @@ namespace CoffeeHouse.Windows
             stuffList = Context.Stuff.ToList();
 
             LvProductList.ItemsSource = stuffList;
+        }
+
+        private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            AddEditProductWindow addEditProductWindow = new AddEditProductWindow();
+            this.Hide();
+            addEditProductWindow.ShowDialog();
+            this.Show();
+        }
+
+        private void BtnAddToCart_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            var selectedProduct = button.DataContext as DB.Stuff;
+
+
+            if (selectedProduct != null) 
+            {
+                ClassHelper.CartClass.Stuffs.Add(selectedProduct);
+            }
+
+
+        }
+
+        private void BtnGoToCart_Click(object sender, RoutedEventArgs e)
+        {
+            CartWindow cartWindow = new CartWindow();
+            cartWindow.Show();
         }
     }
 }

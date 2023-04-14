@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using CoffeeHouse.Windows;
+
 namespace CoffeeHouse
 {
     /// <summary>
@@ -23,6 +25,15 @@ namespace CoffeeHouse
         public MainWindow()
         {
             InitializeComponent();
+
+            TxtUserName.Text = ClassHelper.UserDataClass.Emploee.FullName + " / " + ClassHelper.UserDataClass.Emploee.Post.Title;
+        }
+
+        private void BtnProductList_Click(object sender, RoutedEventArgs e)
+        {
+            ProductListWindow productListWindow = new ProductListWindow();
+            productListWindow.Show();
+            this.Close();
         }
     }
 }

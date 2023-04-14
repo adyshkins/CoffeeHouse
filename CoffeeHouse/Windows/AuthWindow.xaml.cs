@@ -40,13 +40,19 @@ namespace CoffeeHouse.Windows
             // 2. Выбрать нужные данный(логин и пароль)
             // 3. Получить одну запись
 
-            var authUser = Context.Guest.ToList()
+            var authUser = Context.Emploee.ToList()
                 .Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password)
                 .FirstOrDefault();
 
             if (authUser != null)
             {
-                MessageBox.Show("Ok");
+                // сохраняем пользователя в системе 
+                ClassHelper.UserDataClass.Emploee = authUser;
+
+                // переходим на главную страницу
+                MainWindow mainWindow = new MainWindow();   
+                mainWindow.Show();
+                this.Close();
             }
             else
             {

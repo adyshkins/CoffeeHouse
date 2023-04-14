@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CoffeeHouse.Windows"
         mc:Ignorable="d"
         Title="AddEditProductWindow" 
-         Height="800" 
+        Height="1000" 
         Width="500"
         WindowStartupLocation="CenterScreen">
     <Grid>
@@ -26,6 +26,7 @@
             <Button x:Name="BtnChooseImage" 
                     Content="Выбрать фото"
                     Width="200"
+                    Height="30"
                     Click="BtnChooseImage_Click"/>
 
             <TextBlock Text="Введите наименование товара"
