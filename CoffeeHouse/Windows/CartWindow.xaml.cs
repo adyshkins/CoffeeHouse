@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,9 @@ namespace CoffeeHouse.Windows
 
         private void GetListProduct()
         {
-            LvCartProductList.ItemsSource = ClassHelper.CartClass.Stuffs;
+            ObservableCollection<DB.Stuff> stuffs = new ObservableCollection<DB.Stuff>(ClassHelper.CartClass.Stuffs);
+
+            LvCartProductList.ItemsSource = stuffs;
         }
 
         private void BtnRemoveToCart_Click(object sender, RoutedEventArgs e)
